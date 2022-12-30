@@ -1,11 +1,14 @@
 from django.db import models
-from django.contrib.auth.models import User
 
-class Student(User):
-    pass
 
+class Student(models.Model):
+    username = models.CharField(unique=True,max_length=50)
+    created_at = models.DateTimeField
+    
 class Courses(models.Model):
-    pass
+    name = models.CharField(unique=True,max_length=50)
+    created_at = models.DateTimeField
 
 class Friendship(models.Model):
-    pass
+    students = models.ManyToManyField(Student,blank=True)
+    created_at = models.DateTimeField

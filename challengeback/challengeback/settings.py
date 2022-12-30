@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -76,11 +77,11 @@ WSGI_APPLICATION = 'challengeback.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'app',
-        'USER': 'app',
-        'PASSWORD': '!ChangeMe!',
+        'NAME': 'rafamChallenge',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
         'HOST': '127.0.0.1',
-        'PORT': '56706',
+        'PORT': '5433',
     }
 }
 
