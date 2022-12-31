@@ -1,4 +1,4 @@
-from models import Friendship,Student,Lesson
+from core.models import Friendship,Student,Lesson
 
 def sign_up_course(student,lesson):
     '''sign up a student for a course'''
@@ -21,6 +21,9 @@ def list_lessons_from_student(student:Student):
 
 def student_is_unique(student:Student):
     return Student.objects.filter(username = student.username) == None
+
+def list_all_lessons():
+    return Lesson.objects.all()
 
 
 

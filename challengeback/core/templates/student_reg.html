@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Student sign up</h1>
+<form method="POST" class="post-form">{% csrf_token %}
+{{form.username.label}}
+{{form.username}}
+<button type="submit" value="submit" class="save btn btn-secondary">Sign up</button>
+</form>
+{% endblock %}

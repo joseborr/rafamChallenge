@@ -5,7 +5,7 @@ from datetime import datetime
 class Student(models.Model):
     username = models.CharField(unique=True,max_length=50)
     created_at = models.DateTimeField(editable=False, null=True)
-    updated_at = models.DateTimeField(null=True)
+    updated_at = models.DateTimeField(null=True, default=None)
     
 
     def save(self,*args,**kwargs):
@@ -20,9 +20,9 @@ class Student(models.Model):
     
 class Lesson(models.Model):
     name = models.CharField(unique=True,max_length=50)
-    students = models.ManyToManyField(Student,blank=True)
+    students = models.ManyToManyField(Student,blank=True, default=None)
     created_at = models.DateTimeField(editable=False, null=True)
-    updated_at = models.DateTimeField(null=True)
+    updated_at = models.DateTimeField(null=True, default=None)
 
     def save(self,*args,**kwargs):
         ''' On save, update timestamps '''
@@ -38,7 +38,7 @@ class Lesson(models.Model):
 class Friendship(models.Model):
     friends = models.ManyToManyField(Student,blank=True)
     created_at = models.DateTimeField(editable=False, null=True)
-    updated_at = models.DateTimeField(null=True)
+    updated_at = models.DateTimeField(null=True, default=None)
 
     def save(self,*args,**kwargs):
         ''' On save, update timestamps '''

@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Courses</h1>
+<h1>Courses</h1>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+</style>
+<table style="width:100%">
+    <tr>
+        <th align="center">Course name </th>
+        <th align="center">Created at</th>
+    </tr>
+    <tr>
+    {% for lesson in lessons %}
+    <td align="center">{{lesson.name}}</td>
+    <td align="center">{{lesson.created_at}}</td>
+    {% endfor %}
+    </tr>
+
+</table>
+
 {% endblock %}

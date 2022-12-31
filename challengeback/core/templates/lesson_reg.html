@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Lesson registry</h1>
+<form method="POST" class="post-form">{% csrf_token %}
+{{form.name.label}}
+{{form.name}}
+<button type="submit" value="submit" class="save btn btn-secondary">Submit</button>
+</form>
+{% endblock %}
