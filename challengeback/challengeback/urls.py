@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from core.views import frontPage
+
 
 urlpatterns = [
-    path('app/',include('app.urls')),
     path('admin/', admin.site.urls),
+    path('', frontPage, name='frontpage'),
+    
 ]
