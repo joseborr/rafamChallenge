@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{me}} profile</h1>
+<h4>My friends</h4>
+{% for friend in friends %}
+    {{friend}}
+{% endfor %}
+<form method="POST" class="post-form">{% csrf_token %}
+{{form}}
+<button type="submit" value="submit" class="save btn btn-secondary">Set friendship</button>
+</form>
+{% endblock %}

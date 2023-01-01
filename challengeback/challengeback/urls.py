@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from core.views import frontPage, studentView, lessonView
+from core.views import frontPage, studentView, lessonView, studentFriendView
 
 
 urlpatterns = [
@@ -23,4 +23,5 @@ urlpatterns = [
     path('', frontPage, name='frontpage'),
     path('student/',studentView, name='student_reg'),
     path('lesson/', lessonView, name='lesson_reg'),
+    path('<id>/friends/', studentFriendView, name='student_friends'),
 ]

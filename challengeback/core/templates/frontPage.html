@@ -12,13 +12,21 @@
         <th align="center">Course name </th>
         <th align="center">Created at</th>
     </tr>
-    <tr>
+    
     {% for lesson in lessons %}
-    <td align="center">{{lesson.name}}</td>
-    <td align="center">{{lesson.created_at}}</td>
-    {% endfor %}
+    <tr>
+        <td align="center">{{lesson.name}}</td>
+        <td align="center">{{lesson.created_at}}</td>
     </tr>
-
+    {% endfor %}
 </table>
+
+<form action="{% url 'student_reg' %}">
+    <input type="submit" value="Students" />
+</form>
+<form action="{% url 'lesson_reg' %}">
+    <input type="submit" value="Add lesson" />
+</form>
+
 
 {% endblock %}

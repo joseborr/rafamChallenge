@@ -7,6 +7,8 @@ class Student(models.Model):
     created_at = models.DateTimeField(editable=False, null=True)
     updated_at = models.DateTimeField(null=True, default=None)
     
+    class Meta:
+        ordering = ['username']
 
     def save(self,*args,**kwargs):
         ''' On save, update timestamps '''
@@ -23,6 +25,9 @@ class Lesson(models.Model):
     students = models.ManyToManyField(Student,blank=True, default=None)
     created_at = models.DateTimeField(editable=False, null=True)
     updated_at = models.DateTimeField(null=True, default=None)
+
+    class Meta:
+        ordering = ['name']
 
     def save(self,*args,**kwargs):
         ''' On save, update timestamps '''
