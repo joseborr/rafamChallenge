@@ -56,3 +56,7 @@ def frienship_exists(student_sender,student_receiver):
                             and single_friendship.friends.all()[1] in friends):
             return True
     return False
+
+def list_all_friendships():
+    return Friendship.objects.all()
+
