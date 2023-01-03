@@ -2,15 +2,18 @@
 
 {% block content %}
 <h1>{{me}} profile</h1>
-<h4>My friends</h4>
-{% for friend in friends %}
-    {{friend}}
+<h4>My lessons</h4>
+{% for lesson in lessons %}
+{{lesson}}
 {% endfor %}
 <form method="POST" class="post-form">{% csrf_token %}
-{{form}}
-<button type="submit" value="submit" class="save btn btn-secondary">Set friendship</button>
+    {{form.lessons.label}}
+    {{form.lessons}}
+    <button type="submit" value="submit" class="save btn btn-secondary">Sign up</button>
 </form>
+
 <form action="{% url 'student_reg' %}">
     <input type="submit" value="Go Back" />
 </form>
+
 {% endblock %}

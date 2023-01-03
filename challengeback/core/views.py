@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from core.forms import StudentForm, LessonForm, FriendshipForm
+from core.forms import StudentForm, LessonForm, FriendshipForm, TakeLessonForm
 from core.models import Student,Lesson,Friendship
 from core.queries import *
 
@@ -48,12 +48,24 @@ def studentFriendView(request, id):
         form = FriendshipForm(request.POST)
         if form.is_valid():
             friend = form.cleaned_data['students']
-            student = get_student_by_id(id)
-            accept_friendship(student,friend) 
+            accept_friendship(me,friend) 
     else:
         form = FriendshipForm()
 
     context = {'friends':friends, 'form':form, 'me':me}
     return render(request,'student_friends.html',context)
 
- 
+def takeLessonView(request,id):
+    me = get_student_by_id(id)
+    my_lessons = list_lessons_from_student(me)
+    my_lessons = my_lessons if my_lessons else ('No lessons yet',)
+    if request.method == 'POST':
+        form = TakeLessonForm(request.POST)
+        if form.is_valid():
+            lesson = form.cleaned_data['lessons']
+            sign_up_course(me,lesson)
+    else:
+        form = TakeLessonForm()
+    context = {'form':form, 'lessons':my_lessons,'me':me}
+    return render(request,'take_lessons.html',context)
+            
