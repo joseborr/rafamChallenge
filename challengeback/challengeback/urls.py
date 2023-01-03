@@ -15,72 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+
+from rest_framework import routers
+
 from core.views import frontPage, studentView, lessonView, studentFriendView,takeLessonView
-from core.models import Student
-from core.queries import *
-from rest_framework import routers, serializers, viewsets
-
-class StudentSerializer(serializers.HyperlinkedModelSerializer):
-    
-    class Meta:
-        model = Student
-        fields = ['id','username','created_at']
-
-class FriendshipSerializer(serializers.HyperlinkedModelSerializer):
-    friends = serializers.SlugRelatedField(
-        many=True,
-        read_only=True,
-        slug_field='username'
-    )
-    class Meta:
-        model = Friendship
-        fields = ['friends','created_at']
-
-class FriendsForSpecificUserSerializer(serializers.HyperlinkedModelSerializer):
-    friends = serializers.SlugRelatedField(
-        many=True,
-        read_only=True,
-        slug_field ='username'
-    )
-    class Meta:
-        model = Student
-        fields = ['id','username','created_at','friends']
-
-class MyLessonsSerializer(serializers.HyperlinkedModelSerializer):
-    lessons = serializers.SlugRelatedField(
-        many=True,
-        read_only=True,
-        slug_field ='name'
-    )
-    class Meta:
-        model = Lesson
-        fields = ['name','lessons']
-
-class MyLessonsViewSet(viewsets.ModelViewSet):
-    serializer_class = MyLessonsSerializer
-    def get_queryset(self):
-        id = self.kwargs['id']
-        student = get_student_by_id(id)
-        return list_lessons_from_student(student)
-
-
-class StudentViewSet(viewsets.ModelViewSet):
-    serializer_class = StudentSerializer
-    queryset = list_all_students()
-        
-
-class FriendshipViewSet(viewsets.ModelViewSet):
-    serializer_class = FriendshipSerializer
-    queryset = list_all_friendships()
- 
-
-class MyFriendsViewSet(viewsets.ModelViewSet):
-    serializer_class = FriendsForSpecificUserSerializer
-    def get_queryset(self):
-        id = self.kwargs['id']
-        return list_student_friends(id)
-
-    
+from core.views import StudentViewSet, FriendshipViewSet, MyFriendsViewSet, MyLessonsViewSet
+   
 
 router = routers.DefaultRouter()
 router.register(r'students', StudentViewSet)

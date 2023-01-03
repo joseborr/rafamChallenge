@@ -1,7 +1,34 @@
 from django.shortcuts import render,redirect
+from rest_framework import viewsets
+
 from core.forms import StudentForm, LessonForm, FriendshipForm, TakeLessonForm
 from core.models import Student,Lesson,Friendship
 from core.queries import *
+from core.serializers import MyLessonsSerializer, StudentSerializer, FriendshipSerializer, FriendsForSpecificUserSerializer
+
+class MyLessonsViewSet(viewsets.ModelViewSet):
+    serializer_class = MyLessonsSerializer
+    def get_queryset(self):
+        id = self.kwargs['id']
+        student = get_student_by_id(id)
+        return list_lessons_from_student(student)
+
+
+class StudentViewSet(viewsets.ModelViewSet):
+    serializer_class = StudentSerializer
+    queryset = list_all_students()
+        
+
+class FriendshipViewSet(viewsets.ModelViewSet):
+    serializer_class = FriendshipSerializer
+    queryset = list_all_friendships()
+ 
+
+class MyFriendsViewSet(viewsets.ModelViewSet):
+    serializer_class = FriendsForSpecificUserSerializer
+    def get_queryset(self):
+        id = self.kwargs['id']
+        return list_student_friends(id)
 
 
 def frontPage(request):
