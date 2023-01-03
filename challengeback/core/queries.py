@@ -60,3 +60,6 @@ def frienship_exists(student_sender,student_receiver):
 def list_all_friendships():
     return Friendship.objects.all()
 
+def get_lesson_by_id(id):
+    return Lesson.objects.get(pk=id)
+
