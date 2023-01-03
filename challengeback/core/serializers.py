@@ -34,4 +34,4 @@ class MyLessonsSerializer(serializers.HyperlinkedModelSerializer):
     )
     class Meta:
         model = Lesson
-        fields = ['name','lessons']
+        fields = ['name','lessons','topic']

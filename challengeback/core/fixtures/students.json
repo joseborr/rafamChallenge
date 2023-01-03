@@ -1,0 +1,47 @@
+[
+    {
+        "model":"core.student",
+        "pk":1,
+        "fields": {
+            "username":"Joe",
+            "created_at": "2023-01-03 13:19:08.379 -0300",
+            "updated_at": "2023-01-03 13:19:08.379 -0300"
+        }
+    },
+    {
+        "model":"core.student",
+        "pk":2,
+        "fields": {
+            "username":"Mark",
+            "created_at": "2023-01-03 13:19:08.379 -0300",
+            "updated_at": "2023-01-03 13:19:08.379 -0300"
+        }
+    },
+    {
+        "model":"core.student",
+        "pk":3,
+        "fields": {
+            "username":"Jodie",
+            "created_at": "2023-01-03 13:19:08.379 -0300",
+            "updated_at": "2023-01-03 13:19:08.379 -0300"
+        }
+    },
+    {
+        "model":"core.student",
+        "pk":4,
+        "fields": {
+            "username":"Rachel",
+            "created_at": "2023-01-03 13:19:08.379 -0300",
+            "updated_at": "2023-01-03 13:19:08.379 -0300"
+        }
+    },
+    {
+        "model":"core.student",
+        "pk":5,
+        "fields": {
+            "username":"Sara",
+            "created_at": "2023-01-03 13:19:08.379 -0300",
+            "updated_at": "2023-01-03 13:19:08.379 -0300"
+        }
+    }
+]

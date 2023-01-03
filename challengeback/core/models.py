@@ -22,7 +22,7 @@ class Student(models.Model):
     
 class Lesson(models.Model):
     name = models.CharField(unique=True,max_length=50)
-    #topic = models.CharField(max_length=50)
+    topic = models.CharField(max_length=50,null=True, default=None)
     students = models.ManyToManyField(Student,blank=True, default=None)
     created_at = models.DateTimeField(editable=False, null=True)
     updated_at = models.DateTimeField(null=True, default=None)
