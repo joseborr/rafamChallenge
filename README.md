@@ -1,7 +1,7 @@
 # Challenge para Rafam
-Jose Ignacio Borajo
+## Jose Ignacio Borajo
 
-# Base de datos
+## Base de datos
 Se uso una bd postgresql:
 - nombre : rafamChallenge
 - usuario: postgres
@@ -9,9 +9,8 @@ Se uso una bd postgresql:
 - host: 127.0.0.1
 - puerto: 5433
 
-# Datos de prueba
+## Datos de prueba
 Dentro del directorio challengeback ejecutar el siguiente comando:
-    - python manage.py loaddata students.json lessons.json
+`python manage.py loaddata students.json lessons.json`
 esto poblará la bd con datos de prueba para las tablas 'student' y 'lesson'
 
-#
