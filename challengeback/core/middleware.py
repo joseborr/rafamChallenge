@@ -5,6 +5,7 @@ import re
 logger = logging.getLogger(__name__)
 
 class CustomHeaderMiddleware(MiddlewareMixin):
+    '''hola'''
 
     def process_request(self, request):
         request.META['HTTP_MY_HEADER'] = "Hello"
