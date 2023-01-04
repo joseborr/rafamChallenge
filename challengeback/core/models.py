@@ -2,6 +2,7 @@ from django.db import models
 from datetime import datetime
 
 
+
 class Student(models.Model):
     username = models.CharField(unique=True,max_length=50)
     created_at = models.DateTimeField(editable=False, null=True)
@@ -19,6 +20,7 @@ class Student(models.Model):
 
     def __str__(self):
         return self.username
+    
     
 class Lesson(models.Model):
     name = models.CharField(unique=True,max_length=50)
@@ -52,4 +54,6 @@ class Friendship(models.Model):
             self.created_at = datetime.now()
         self.updated_at = datetime.now()
         return super(Friendship,self).save(*args,**kwargs)
+
+
     
