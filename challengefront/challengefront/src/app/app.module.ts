@@ -9,6 +9,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatMenuModule} from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list'
+import { MatExpansionModule} from '@angular/material/expansion'
+
 
 
 @NgModule({
@@ -23,9 +27,13 @@ import { MatDividerModule } from '@angular/material/divider';
     MatSidenavModule,
     MatButtonModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    MatMenuModule,
+    MatListModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
