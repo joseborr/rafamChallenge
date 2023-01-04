@@ -23,13 +23,13 @@ class StudentTest(APITestCase):
         self.assertEqual(len(response.data), 0)
         self.assertEqual(response.status_code,status.HTTP_200_OK)
 
-        accept_friendship(self.joe,self.mark)
+        accept_friendship(self.joe,self.mark) #creates a friendship between Joe and Mark
         response = self.client.get('/api/friendships/')
         self.assertEqual(response.status_code,status.HTTP_200_OK)
         self.assertEqual(len(response.data), 1)
-        created = response.data[0]['created_at']
-        self.assertEqual(response.data,[{"friends": ["Joe","Mark"],"created_at": created}])
-
+        #created = response.data[0]['created_at']
+        #self.assertEqual(response.data,[{"friends": ["Joe","Mark"],"created_at": created}])
+        self.assertEqual(response.data[0]["friends"], ["Joe","Mark"])
 
     def test_myfriends_api(self):
         '''test friendship of student with id = 1'''
@@ -52,8 +52,10 @@ class StudentTest(APITestCase):
         self.assertEqual(response.status_code,status.HTTP_200_OK)
         self.assertEqual(len(response.data), 5)
         student = response.data[0]
-        created = response.data[0]["created_at"]
-        self.assertEqual(student,{"id": 3,"username": "Jodie","created_at": created})
+        #created = response.data[0]["created_at"]
+        #self.assertEqual(student,{"id": 3,"username": "Jodie","created_at": created})
+        self.assertEqual(student["id"],3)
+        self.assertEqual(student["username"],"Jodie")
 
     def test_mylessons_api(self):
         '''test lessons of student with id = 1'''

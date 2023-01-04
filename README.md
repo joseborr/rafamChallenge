@@ -12,6 +12,10 @@ Se uso una bd postgresql:
 ## Servidor
 Ejecutar `python manage.py runserver` dentro de el directorio rafamChallenge/challengeback para levantar el servidor.
 
+## Entorno virtual
+Se utilizo pipenv. Se instala con pip. Para iniciar el entorno ejecutar `pipenv shell`.
+Para instalar dependencias `pipenv install requests`
+
 ## Datos de prueba
 Ejecutar `python manage.py loaddata students.json lessons.json` dentro de el directorio rafamChallenge/challengeback.
 Esto poblará la bd con datos de prueba para las tablas 'student' y 'lesson' pero no crea las relaciones 
@@ -22,5 +26,8 @@ Los datos de prueba se cargan automáticamente para los test.
 
 #### Alternativa
 Es posible visualizar el comportamiento de la base de datos y ver reflejado en los distintos endpoints. Mediante navegación en http://127.0.0.1:8000/ es posible cargar nuevos estudiantes, amistades y clases tomadas, estableciendo las relaciones correspondientes en la bd. Para las api ingresar en http://127.0.0.1:8000/api/ donde hay accesos a los endpoints que muestran todos los estudiantes y todas las amistades. Para visualizar las clases tomadas por el estudiante con id = 1 ingresar en http://127.0.0.1:8000/api/mylessons/1/ y para ver sus amistades http://127.0.0.1:8000/api/myfriends/1/
+
+## Request header y log
+Las solicitudes entrantes se les agrega el header HTTP con nombre "MY_HEADER" con valor "Hello". Todos los request quedan registrados en el archivo general.log . Cada entrada es un diccionario.
 
 
