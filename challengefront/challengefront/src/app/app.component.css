@@ -1,5 +1,5 @@
 mat-toolbar {
-    background: #1C61A6;
+    background: #12416f;
     color: white;
 }
 
@@ -7,7 +7,7 @@ mat-sidenav {
     margin: 16px;
     width: 200px;
     border-right: none;
-    background: #1C61A6;
+    background: #12416f;
     color: white;
     
     padding: 16px;
@@ -27,13 +27,40 @@ mat-sidenav {
     color: lightgray;
 }
 mat-expansion-panel {
-    background: #1C61A6;
+    background: #12416f;
     font-size: 9;
     color: white;
 }
+mat-panel-description{
+    color: white;
+    font-size:x-small
+}
 
 mat-sidenav-container {
-    height: calc(100vh - 65px);
+    height: calc(100% -120px);
 }
+mat-expansion-panel-header{
+    color:white;
+    font-size: small;
+    text-justify:auto;
+    text-align: left;
+    
+}
+mat-divider  {
+    display: block;
+    margin: 0  !important;
+    padding: 0 !important;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: white;
+    
+  }
+
+.footer{
+    color: white;
+    font-size:x-small;
+}
+
+
 
     
