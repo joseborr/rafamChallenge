@@ -1,55 +1,76 @@
 <mat-sidenav-container>
   <mat-sidenav class="mat-elevation-z8" opened="true" disableClose="true">
     <mat-panel-title></mat-panel-title>
-      <mat-panel-description><p align="left">Desarrollado por RAFAM 2021 <br> <br> v4.12.3</p></mat-panel-description>
-      <mat-divider ></mat-divider>
-      <br> <br>
-      <img src="/assets/LogoRafam2.png" width="150" height="50">       
+    <mat-panel-description>
+      <p align="left">Desarrollado por RAFAM 2021 <br> <br> v4.12.3</p>
+    </mat-panel-description>
+    <mat-divider></mat-divider>
+    <br> <br>
+    <img src="/assets/LogoRafam2.png" width="215" height="70">
     <mat-nav-list>
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>Presupuesto</mat-expansion-panel-header>
+        <mat-nav-list>
+          <mat-list-item routerLink="#">Configuracion</mat-list-item>
+          <mat-list-item routerLink="#">Formulación presupuestaria</mat-list-item>
+          <mat-list-item routerLink="#">Modificación presupuestaria</mat-list-item>
+          <mat-list-item routerLink="#">Programación física</mat-list-item>
+          <mat-list-item routerLink="#">Reportes</mat-list-item>
+        </mat-nav-list>
       </mat-expansion-panel>
+
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>CAS</mat-expansion-panel-header>
       </mat-expansion-panel>
+
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>Planificación</mat-expansion-panel-header>
       </mat-expansion-panel>
+
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>Contrataciones</mat-expansion-panel-header>
       </mat-expansion-panel>
+
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>Portal</mat-expansion-panel-header>
       </mat-expansion-panel>
+
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>Contabilidad</mat-expansion-panel-header>
       </mat-expansion-panel>
+
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>Tesorería</mat-expansion-panel-header>
       </mat-expansion-panel>
+
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>Bienes Físicos</mat-expansion-panel-header>
       </mat-expansion-panel>
+
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>Inversión Pública</mat-expansion-panel-header>
       </mat-expansion-panel>
+
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>Crédito Público</mat-expansion-panel-header>
       </mat-expansion-panel>
+
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>Ingresos Públicos</mat-expansion-panel-header>
       </mat-expansion-panel>
+
       <mat-expansion-panel [togglePosition]="'before'">
-        <mat-expansion-panel-header >Recursos Humanos</mat-expansion-panel-header>
+        <mat-expansion-panel-header>Recursos Humanos</mat-expansion-panel-header>
       </mat-expansion-panel>
 
-      <mat-divider ></mat-divider>
+      <mat-divider></mat-divider>
+
       <div class="footer" #footer>
-        <img src="/assets/SoloLogo.png" width="25" height="25" align="left"> 
-      </div><p>(0221)429-4484/4509 <br> pa@es.gov.ar</p>
+        <img src="/assets/SoloLogo.png" width="25" height="25" align="left">
+        (0221)429-4484/4509 <br> pa@es.gov.ar
+      </div>
+
     </mat-nav-list>
-
-
   </mat-sidenav>
 
   <mat-sidenav-content>

@@ -5,12 +5,12 @@ mat-toolbar {
 
 mat-sidenav {
     margin: 16px;
-    width: 200px;
+    width: 250px;
     border-right: none;
     background: #12416f;
     color: white;
     
-    padding: 16px;
+    padding: 0px;
     text-align: center;
 }
 
@@ -26,12 +26,14 @@ mat-sidenav {
     font-size: 2rem;
     color: lightgray;
 }
+
 mat-expansion-panel {
     background: #12416f;
-    font-size: 9;
+    
     color: white;
 }
 mat-panel-description{
+    padding: 10px;
     color: white;
     font-size:x-small
 }
@@ -41,10 +43,15 @@ mat-sidenav-container {
 }
 mat-expansion-panel-header{
     color:white;
+    font-size: medium;
+    text-justify:auto;
+    text-align: left; 
+}
+mat-list-item{
+    color:white;
     font-size: small;
     text-justify:auto;
     text-align: left;
-    
 }
 mat-divider  {
     display: block;
@@ -58,8 +65,11 @@ mat-divider  {
 
 .footer{
     color: white;
-    font-size:x-small;
+    font-size: small;
+    padding: 10px;
 }
+
+
 
 
 
