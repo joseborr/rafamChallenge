@@ -12,6 +12,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list'
 import { MatExpansionModule} from '@angular/material/expansion'
+import { MatGridListModule } from '@angular/material/grid-list'
 
 
 
@@ -31,6 +32,7 @@ import { MatExpansionModule} from '@angular/material/expansion'
     MatMenuModule,
     MatListModule,
     MatExpansionModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

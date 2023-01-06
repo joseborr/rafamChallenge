@@ -1,5 +1,5 @@
 <mat-sidenav-container>
-  <mat-sidenav class="mat-elevation-z8" opened="true" disableClose="true">
+  <mat-sidenav class="mat-elevation-z8" opened disableClose="True" fixedInViewport="True">
     <mat-panel-title></mat-panel-title>
     <mat-panel-description>
       <p align="left">Desarrollado por RAFAM 2021 <br> <br> v4.12.3</p>
@@ -11,11 +11,11 @@
       <mat-expansion-panel [togglePosition]="'before'">
         <mat-expansion-panel-header>Presupuesto</mat-expansion-panel-header>
         <mat-nav-list>
-          <mat-list-item routerLink="#">Configuracion</mat-list-item>
-          <mat-list-item routerLink="#">Formulación presupuestaria</mat-list-item>
-          <mat-list-item routerLink="#">Modificación presupuestaria</mat-list-item>
-          <mat-list-item routerLink="#">Programación física</mat-list-item>
-          <mat-list-item routerLink="#">Reportes</mat-list-item>
+          <mat-list-item routerLink="#"><p>Configuracion</p></mat-list-item>
+          <mat-list-item routerLink="#"><p>Formulación presupuestaria</p></mat-list-item>
+          <mat-list-item routerLink="#"><p>Modificación presupuestaria</p></mat-list-item>
+          <mat-list-item routerLink="#"><p>Programación física</p></mat-list-item>
+          <mat-list-item routerLink="#"><p>Reportes</p></mat-list-item>
         </mat-nav-list>
       </mat-expansion-panel>
 
@@ -66,7 +66,7 @@
       <mat-divider></mat-divider>
 
       <div class="footer" #footer>
-        <img src="/assets/SoloLogo.png" width="25" height="25" align="left">
+        <img src="/assets/SoloLogo.png" width="25" height="25" align="left" >
         (0221)429-4484/4509 <br> pa@es.gov.ar
       </div>
 
@@ -75,7 +75,8 @@
 
   <mat-sidenav-content>
     <div class="content mat-elevation-z8">
-      Main content here!
+      Hola
     </div>
   </mat-sidenav-content>
+  
 </mat-sidenav-container>
