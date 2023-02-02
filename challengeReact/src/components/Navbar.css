@@ -13,4 +13,9 @@ p{
     padding: 15px;
 }
 
-
+#root > div > nav > div.rs-sidenav-body > ul > li{
+    display: block;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: white;
+}
