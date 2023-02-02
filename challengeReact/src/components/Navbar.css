@@ -1,10 +1,16 @@
 @import "rsuite/dist/rsuite.css";
 
-div.sidenav{
-    margin: 16px;
-    width: 260px;
-    border-right: none;
-    background: #12416f;
-    color: white;
-    text-align: center;
+p{
+    color:white;
+    font-size:small;
+    text-align: left;
 }
+
+.footer{
+    color: white;
+    font-size: x-small;
+    text-align: left;
+    padding: 15px;
+}
+
+
