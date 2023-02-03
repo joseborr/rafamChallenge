@@ -4,11 +4,9 @@ import { Sidenav, Nav } from 'rsuite';
 import './Navbar.css';
 import logoR from '../assets/LogoRafam2.png';
 import logo from '../assets/SoloLogo.png';
+import Configuracion from './Configuracion';
 
-const sidenavStyle = {
-    color: 'white',
-    backgroundColor: '#12416f'
-}
+
 const headerStyle = {
     padding: 15
 }
@@ -18,7 +16,7 @@ function Navbar() {
 
     return (
         <div style={{ width: 240 }}>
-            <Sidenav defaultOpenKeys={['1']} style={sidenavStyle} appearance='subtle'>
+            <Sidenav defaultOpenKeys={['1']}  appearance='subtle'>
 
                 <Sidenav.Header style={headerStyle}>
                     <p align="left">Desarrollado por RAFAM 2021 <br /> v4.12.3</p>
@@ -30,8 +28,8 @@ function Navbar() {
                         <Nav.Item divider />
                         <img src={logoR} alt={"logoR"} width="215" height="70" />
                         <Nav.Menu eventKey="1" title="Presupuesto">
-                            <Nav.Item eventKey='1-1'>Configuracion</Nav.Item>
-                            <Nav.Item eventKey='1-2'>Formulación presupuestaria</Nav.Item>
+                            <Nav.Item eventKey='1-1' href='/configuracion'>Configuracion</Nav.Item>
+                            <Nav.Item eventKey='1-2' href='/formulacion-presup'>Formulación presupuestaria</Nav.Item>
                             <Nav.Item eventKey='1-3'>Modificación presupuestaria</Nav.Item>
                             <Nav.Item eventKey='1-4'>Programación física</Nav.Item>
                             <Nav.Item eventKey='1-5'>Reportes</Nav.Item>

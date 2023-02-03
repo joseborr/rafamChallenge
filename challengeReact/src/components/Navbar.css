@@ -19,3 +19,9 @@ p{
     border-top-style: solid;
     border-top-color: white;
 }
+
+#root > div > nav{
+    color: white;
+    background-color: #12416f;
+}
+
